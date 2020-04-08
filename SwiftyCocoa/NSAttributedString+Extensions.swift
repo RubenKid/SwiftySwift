@@ -11,7 +11,7 @@ import Foundation
 // MARK: NSAttributedString
 
 extension NSAttributedString {
-    public convenience init(attributedString attrStr: NSAttributedString, attributes attrs: [NSAttributedStringKey : Any]?) {
+    public convenience init(attributedString attrStr: NSAttributedString, attributes attrs: [NSAttributedString.Key : Any]?) {
         guard let attrs = attrs else {
             self.init(attributedString: attrStr)
             return
@@ -26,11 +26,11 @@ extension NSAttributedString {
 // MARK: - NSMutableAttributedString
 
 extension NSMutableAttributedString {
-    public func addAttribute(_ name: NSAttributedStringKey, value: Any) {
+    public func addAttribute(_ name: NSAttributedString.Key, value: Any) {
         addAttribute(name, value: value, range: NSMakeRange(0, self.length))
     }
     
-    public func addAttributes(_ attrs: [NSAttributedStringKey : Any]) {
+    public func addAttributes(_ attrs: [NSAttributedString.Key : Any]) {
         addAttributes(attrs, range: NSMakeRange(0, self.length))
     }
 }

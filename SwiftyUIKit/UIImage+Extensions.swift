@@ -66,7 +66,7 @@ extension UIImage {
         return image
     }
     
-    public func image(withOrientation orientation: UIImageOrientation) -> UIImage? {
+    public func image(withOrientation orientation: UIImage.Orientation) -> UIImage? {
         if let cgImage = self.cgImage {
             return UIImage(cgImage: cgImage, scale: scale, orientation: orientation)
         } else if let ciImage = self.ciImage {
@@ -87,8 +87,8 @@ extension UIImage {
 
 // MARK: - UIImageOrientation
 
-extension UIImageOrientation {
-    public var verticallyMirrored: UIImageOrientation {
+extension UIImage.Orientation {
+    public var verticallyMirrored: UIImage.Orientation {
         switch (self) {
         case .up:            return .downMirrored;
         case .down:          return .upMirrored;
@@ -101,7 +101,7 @@ extension UIImageOrientation {
         }
     }
     
-    public var horizontallyMirrored: UIImageOrientation {
+    public var horizontallyMirrored: UIImage.Orientation {
         switch (self) {
         case .up:            return .upMirrored;
         case .down:          return .downMirrored;

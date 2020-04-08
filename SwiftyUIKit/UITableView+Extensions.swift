@@ -25,13 +25,13 @@ extension UITableView {
         }
     }
     
-    public func insertSection(_ section: Int, with animation: UITableViewRowAnimation) {
+    public func insertSection(_ section: Int, with animation: UITableView.RowAnimation) {
         insertSections(IndexSet(integer: section), with: animation)
     }
-    public func deleteSection(_ section: Int, with animation: UITableViewRowAnimation) {
+    public func deleteSection(_ section: Int, with animation: UITableView.RowAnimation) {
         deleteSections(IndexSet(integer: section), with: animation)
     }
-    public func reloadSection(_ section: Int, with animation: UITableViewRowAnimation) {
+    public func reloadSection(_ section: Int, with animation: UITableView.RowAnimation) {
         reloadSections(IndexSet(integer: section), with: animation)
     }
     

@@ -23,6 +23,6 @@ extension Thread {
     }
     
     public class func objectFromThreadDictionary<T: AnyObject>(_ key:NSCopying, defaultValue: @autoclosure () -> T) -> T {
-        return current.objectFromThreadDictionary(key, defaultValue: defaultValue)
+        return current.objectFromThreadDictionary(key, defaultValue: defaultValue())
     }
 }

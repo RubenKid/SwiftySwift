@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target 	= "8.0"
 
   s.pod_target_xcconfig = { 
-    'SWIFT_VERSION' => '4.0',
+    'SWIFT_VERSION' => '5.0',
     'SWIFT_SWIFT3_OBJC_INFERENCE' => 'Off',
   }
 

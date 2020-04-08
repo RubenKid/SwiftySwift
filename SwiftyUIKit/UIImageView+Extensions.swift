@@ -15,7 +15,7 @@ extension UIImageView {
         self.init(image: UIImage(named: name))
     }
     
-    public var imageOrientation: UIImageOrientation? {
+    public var imageOrientation: UIImage.Orientation? {
         get { return image?.imageOrientation }
         set { image = newValue.flatMap { image?.image(withOrientation: $0) } }
     }
